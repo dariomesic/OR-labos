@@ -4,7 +4,7 @@ Pub quizzes in Zagreb
 ## Keywords 	
 quiz, Zagreb, fun
 ## Publication date 	
-2015-10-26
+2022-10-26
 ## Publisher
 Dario Mesic
 ## Creator 	
