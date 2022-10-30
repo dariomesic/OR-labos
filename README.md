@@ -2,7 +2,7 @@
 ## Title 	
 Pub quizzes in Zagreb
 ## Keywords 	
-quiz, Zagreb, fun
+quiz, Zagreb
 ## Publication date 	
 2022-10-26
 ## Publisher
