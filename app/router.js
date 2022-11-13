@@ -4,7 +4,7 @@ const db = require('./db/database');
 
 router.get("/", function(req, res, next){
 
-	res.render('home', {title : 'Node JS Ajax CRUD Application'});
+	res.render('datatable');
 
 });
 
