@@ -1,0 +1,1332 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "kvizevi.json",
+    "type": "object",
+    "default": {},
+    "title": "Kvizevi",
+	"description": "Data set of pub quizzes in Zagreb.",
+    "required": [
+        "kvizovi"
+    ],
+    "properties": {
+        "kvizovi": {
+            "type": "array",
+            "default": [],
+            "title": "The kvizovi Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "id_kviz",
+                    "name",
+                    "description",
+                    "popularity",
+                    "duration",
+                    "team_number",
+                    "theme",
+                    "time",
+                    "rewards",
+                    "registrarion_fee",
+                    "contact",
+                    "picture",
+                    "max_teams",
+                    "lokacije"
+                ],
+                "properties": {
+                    "id_kviz": {
+                        "type": "integer",
+                        "title": "The id_kviz Schema",
+                        "examples": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "The name Schema",
+                        "examples": [
+                            "Fast Facts Trivia",
+                            "Schlosser quiz",
+                            "Plava ptica",
+                            "Silent pub kviz",
+                            "Žabac",
+                            "JFK kviz",
+                            "Vintage kviz",
+                            "Inquizicija",
+                            "Najgori kviz",
+                            "Vortex Quiz Factory",
+                            "Animatori Sivih Stanica",
+                            "Urbana kviz priča"
+                        ]
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "The description Schema",
+                        "examples": [
+                            "-",
+                            "igra se liga u dvije divizije - divizija Mirko Miočić i divizija Mladost). Liga ima 30-ak kola i trenutno se igra 3. sezona. Ekipe su od 2 do 5 članova, a kotizacije nema. Pobjednike lige očekuju vrijedne nagrade, a postoje i nagrade za pobjednike svakog pojedinačnog kviza.",
+                            "Pub kviz u samom centru grada, pitanja iz svih mogućih područja i dosega ljudskog i neljudskog znanja, super nagrade, velike količine šarma i super playlista.",
+                            "Inquizicija je klasičan pub kviz općeg znanja čiji se format sastoji od 3 kruga. U svakom krugu nalaze se različite kategorije pitanja (otvorena, asocijacija, klađenje, video pitanja...) Kviz je opuštenog karaktera i pitanja su uvijek raznovrsna. Svake sezone održava se i liga. U slučaju da je ponedjeljkom državni praznik, blagdan ili utakmica Hrvatske reprezentacije ili Dinama, kviz se prebacuje na utorak ili srijedu.",
+                            "Animatori Sivih Stanica ponedjeljkom u 20 sati okupljaju 300-ak kvizaša na tri lokacije u Zagrebu. (Gotovo) nemoguće dobar nagradni fond, jedinstven koncept kviza, originalna i uvijek friško napisana pitanja čekaju vas svaki ponedjeljak na SmartASS pub kvizu za samo 15 kn."
+                        ]
+                    },
+                    "popularity": {
+                        "type": "string",
+                        "title": "The popularity Schema",
+                        "examples": [
+                            "Instagram : 3281 pratitelja",
+                            "Instagram : 411 pratitelja",
+                            "Instagram : 316 pratitelja",
+                            "Instagram : 807 pratitelja",
+                            "Facebook : 714 pratitelja",
+                            "Facebook : 1157 pratitelja",
+                            "-",
+                            "Facebook : 97 pratitelja",
+                            "Instagram : 180 pratitelja",
+                            "Instagram : 1033 pratitelja",
+                            "Facebook : 2100 pratitelja",
+                            "Instagram : 2309 pratitelja"
+                        ]
+                    },
+                    "duration": {
+                        "type": "string",
+                        "title": "The duration Schema",
+                        "examples": [
+                            "≈2:30min",
+                            "≈2h",
+                            "≈2:30 min",
+                            "-"
+                        ]
+                    },
+                    "team_number": {
+                        "type": "string",
+                        "title": "The team_number Schema",
+                        "examples": [
+                            "6",
+                            "5",
+                            "4"
+                        ]
+                    },
+                    "theme": {
+                        "type": "string",
+                        "title": "The theme Schema",
+                        "examples": [
+                            "opće znanje",
+                            "opće znanje i tematski kvizovi",
+                            "tematski kvizovi"
+                        ]
+                    },
+                    "time": {
+                        "type": "string",
+                        "title": "The time Schema",
+                        "examples": [
+                            "utorak, srijeda i četvrtak u 20h",
+                            "utorak, četvrtak i petak u 20h",
+                            "četvrtak u 20h",
+                            "srijeda/četvrtak u 20h",
+                            "ponedjeljak/srijeda u 20:30h",
+                            "petak u 20h",
+                            "ponedjeljak u 19:45h",
+                            "Ponedjeljak i četvrtak u 20h",
+                            "SKORO SVAKI DAN",
+                            "Ponedjeljak u 20h",
+                            "Četvrtak u 20h"
+                        ]
+                    },
+                    "rewards": {
+                        "type": "string",
+                        "title": "The rewards Schema",
+                        "examples": [
+                            "domaćice, Jameson, nagrade za amazingu, žestice",
+                            "žestice i pokloni iznenađenja",
+                            "žestice, vino i pizza",
+                            "pizza i pokloni iznenađenja",
+                            "pokloni iznenađenja",
+                            "Domino Voucher, boca Antiquea, žestice",
+                            "-",
+                            "Laser Tag, turu skakanja, escape room, poklon bonovi i ostala iznenađenja",
+                            "Pokloni iznenađenja"
+                        ]
+                    },
+                    "registrarion_fee": {
+                        "type": "string",
+                        "title": "The registrarion_fee Schema",
+                        "examples": [
+                            "10kn po osobi",
+                            "15kn po osobi"
+                        ]
+                    },
+                    "contact": {
+                        "type": "string",
+                        "title": "The contact Schema",
+                        "examples": [
+                            "Instagram, Facebook",
+                            "Instagram, Facebook, Whatsapp",
+                            "Facebook",
+                            "Facebook, Instagram",
+                            "Instagram"
+                        ]
+                    },
+                    "picture": {
+                        "type": "string",
+                        "title": "The picture Schema",
+                        "examples": [
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/123544802_2019742468156106_7474287818670168364_n.jpg?_nc_cat=108\u0026ccb=1-7\u0026_nc_sid=8631f5\u0026_nc_eui2=AeFXz5bOQeZdyaCUZug8Vpzzxi-rFcPM6ZXGL6sVw8zplbr7JEN_wb2RqHyhyXc4HU-luXa4mkby4TBkCDQSSVhA\u0026_nc_ohc=c7ljpkeeM6MAX-D2ewe\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9QGC104i-5pjGnf_CWkcsONMLM-BLD5zhtVUKJwc4c9w\u0026oe=637A54F7",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/311045968_185222687335128_545662819323893267_n.jpg?_nc_cat=103\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHhl7WoTjwPTArnT2RC6G92nJEkYGufv3yckSRga5-_fCOyzatAZIsLxlhPkQxSjLx3p1CyZBmaU2ZxCgRnbMqj\u0026_nc_ohc=UjRt2L2sw6kAX--AD6p\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9YXzYpnWI84wZ6AXyuqTfY5U9kLS907vKNBqjJhG9xag\u0026oe=635C580D",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/279843197_110405911659941_4685246366109662213_n.jpg?_nc_cat=109\u0026ccb=1-7\u0026_nc_sid=e3f864\u0026_nc_eui2=AeFlBKuHNFN5xJd0njYkopyoOc3HWKArpA05zcdYoCukDZsVl9IWDsZlgWYTybwrbSxjf4EEMDrK71BU32w71eRD\u0026_nc_ohc=Jf7dR-7hduwAX8ltUDV\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8FXhUUucyVlQW187ZJZXHn-YfoBOJh0SHniC3elEFDsg\u0026oe=635ABAB2",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/262169768_3088949798044511_2359350930360734787_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=730e14\u0026_nc_eui2=AeGbeuOD1NURG9yEFuukiEw0zIPVEr3iL6DMg9USveIvoP_OKJc2BtT54ler20mZD5KUYSeshfAAfmM6ahNmTDgM\u0026_nc_ohc=WMsByYzFNEsAX9679Iy\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8X-Y1-3NLE0bXxe2J-EXx46a8DR-uok2y8R2D1hQd9hg\u0026oe=635B0C55",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/71908712_996116634065018_2073644815060303872_n.jpg?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGFwnBhXTXnIfHUOs2JXokylXawnmIDR0iVdrCeYgNHSPRzWay6VvPYUVlUN6EnW8H22BjgzKJFNM_XH1mbtln0\u0026_nc_ohc=K_HbBDFpdlMAX8HcYQa\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT97Ze598rjR6QnGEcTFzu1-FYhvMlZ2NycayVjDPKbR1Q\u0026oe=637E28C0",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/20841921_760035317534180_8649998737829076014_n.jpg?_nc_cat=104\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeFZCOu3DJ7-xnP-qEg55W75n29Y3hkEu3Ofb1jeGQS7c4JlkCgKt_CHeWzkS7VMu-Icw1udEghQRdpC9uCzqQ1u\u0026_nc_ohc=fjHw48Vdn3wAX9PHthy\u0026_nc_oc=AQmbOa2Ad0id3zvukgjpYG4xkcvmpEhPDAMhpl8khmyP7Ai4GgX1bQK2r9zD5shcUUY\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT92kBT5hL2RfilI3np6NScO33Egbt7EzRRcZIAJffeGCQ\u0026oe=637D645F",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/21557635_1702419059829450_5868218517311846948_n.png?_nc_cat=106\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEiXK-n0hkbHLe2x8F9ARXDiIJTCsBRdveIglMKwFF296Exw3BT9Y_Br10yMwHhRSSKhkXpoLF6OZDgePzveTJo\u0026_nc_ohc=ggtnDI2DLWcAX9inJbR\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT_FlnCCpwfOt5_gaF684T584wWo1DdunpvkuM4Z1Z0gBw\u0026oe=637B03C",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/266693580_108460468356214_35560236528381056_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHPFoxpon56uROXJGDWyl5MohITcM3azYSiEhNwzdrNhGlXyVqCnM9egJLLD0b2kXiiQ6eXTXA33ITCdsCdm4lY\u0026_nc_ohc=1PFgtOVXqaIAX8Hz4Po\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8YFC9-6kBGbKw2kngZ698f8nFJWZQIK9I7YHIEc3GPEg\u0026oe=635AA4CD",
+                            "-",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/294604624_911264369815966_8113351615775619444_n.png?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEStjjmGmQQWQ9UFu92aCeU14fVihdSnMvXh9WKF1Kcy8HX4N3rowCj2twQdNxrT6lRQnvueZdKRX8fo1NID4s6\u0026_nc_ohc=oqTxSDw8y50AX90XcYN\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9WlJiIU8puFv3KgdZ202gIK4QNInsQ3gf6HfdBRjv4rw\u0026oe=635BD1E3",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/277369916_5315953908434909_940276962417417877_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGcUS-XvsJvm9OfJDEeuYNxsCeTT2qhphKwJ5NPaqGmEiPzETKJJ9Tt3fX5b9qCwyx7rXABO41tMn_c9Aq-03ni\u0026_nc_ohc=upcuw4g4g6gAX_7JOKv\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8tkt4k_X0uu3lHP911HeY38V1s7VIx3i_wcC2vAKSmgA\u0026oe=635ACEF4",
+                            "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/275300065_305222551598877_2943176537359294575_n.jpg?_nc_cat=102\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEqfRs4nyqgrgldv7PMoNE_gs7dSNAyywaCzt1I0DLLBkxjYwMpqPerauHPgDDj0l7FJhqz6VWvgyy23EM-hJyr\u0026_nc_ohc=Tg78FQVCHLYAX9Fm7BJ\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8KoRrV4IiCSxRhaaiazQ85ALBZ_T2sBGKItOMjaVIZVg\u0026oe=635C194E"
+                        ]
+                    },
+                    "max_teams": {
+                        "type": "string",
+                        "title": "The max_teams Schema",
+                        "examples": [
+                            "20-40",
+                            "30",
+                            "15",
+                            "25",
+                            "-",
+                            "24"
+                        ]
+                    },
+                    "lokacije": {
+                        "type": "array",
+                        "title": "The lokacije Schema",
+                        "items": {
+                            "type": "object",
+                            "title": "A Schema",
+                            "required": [
+                                "naziv",
+                                "adresa"
+                            ],
+                            "properties": {
+                                "naziv": {
+                                    "type": "string",
+                                    "title": "The naziv Schema",
+                                    "examples": [
+                                        "Out Garden",
+                                        "klub Roko",
+                                        "IQ bar",
+                                        "Bustan Bar",
+                                        "Plava Ptica caffe bar",
+                                        "Silent Caffe",
+                                        "Žabac Caffe",
+                                        "Grey Caffe Bar",
+                                        "Vintage Industrial Bar",
+                                        "Vivas bar Peščenica",
+                                        "Backstage bar",
+                                        "Casual caffe",
+                                        "Sungarden",
+                                        "Varadero bar",
+                                        "Harats Irish Pub",
+                                        "Va Bene",
+                                        "Allegri,",
+                                        "Vetro bar \u0026 bites",
+                                        "Valentino caffe bar",
+                                        "Burger\u0026Beer Bar Mrav",
+                                        "Caffe Bar \u0026 Night Club Urban Zagreb",
+                                        "Excelente bar",
+                                        "Booze and Blues"
+                                    ]
+                                },
+                                "adresa": {
+                                    "type": "string",
+                                    "title": "The adresa Schema",
+                                    "examples": [
+                                        "Ilica 16",
+                                        "Jarunska ul",
+                                        "Ul. Lavoslava Ružičke 66",
+                                        "Varšavska 8",
+                                        "Ul. kralja Držislava 4",
+                                        "Ul. kneza Mislava 7",
+                                        "Jarunska ulica 5",
+                                        "Gundulićeva 34",
+                                        "Savska cesta 160",
+                                        "Trg Stjepana Konzula 2",
+                                        "Dalmatinska 5",
+                                        "Petrinjska 59",
+                                        "Lanište 24",
+                                        "Ozaljska ul. 8",
+                                        "Kaptol 4 Trg Petrice Kerempuha, Opatovina ul. 11",
+                                        "Banjolska ul. 24",
+                                        "Ante Topića Mimare 18, Malešnica",
+                                        "Hektorovićeva 2",
+                                        "Nehajska 6",
+                                        "Trnsko 25A",
+                                        "Trg J.F.Kennedya 6b",
+                                        "Višnjevac ul. 3",
+                                        "Tkalčićeva 84"
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "naziv": "Out Garden",
+                                "adresa": "Ilica 16"
+                            },
+                            {
+                                "naziv": "klub Roko",
+                                "adresa": "Jarunska ul"
+                            },
+                            {
+                                "naziv": "IQ bar",
+                                "adresa": "Ul. Lavoslava Ružičke 66"
+                            },
+                            {
+                                "naziv": "Out Garden",
+                                "adresa": "Ilica 16"
+                            },
+                            {
+                                "naziv": "Bustan Bar",
+                                "adresa": "Varšavska 8"
+                            },
+                            {
+                                "naziv": "Plava Ptica caffe bar",
+                                "adresa": "Ul. kralja Držislava 4"
+                            },
+                            {
+                                "naziv": "Silent Caffe",
+                                "adresa": "Ul. kneza Mislava 7"
+                            },
+                            {
+                                "naziv": "Žabac Caffe",
+                                "adresa": "Jarunska ulica 5"
+                            },
+                            {
+                                "naziv": "Grey Caffe Bar",
+                                "adresa": "Gundulićeva 34"
+                            },
+                            {
+                                "naziv": "Vintage Industrial Bar",
+                                "adresa": "Savska cesta 160"
+                            },
+                            {
+                                "naziv": "Vivas bar Peščenica",
+                                "adresa": "Trg Stjepana Konzula 2"
+                            },
+                            {
+                                "naziv": "Backstage bar",
+                                "adresa": "Dalmatinska 5"
+                            },
+                            {
+                                "naziv": "Casual caffe",
+                                "adresa": "Petrinjska 59"
+                            },
+                            {
+                                "naziv": "Sungarden",
+                                "adresa": "Lanište 24"
+                            },
+                            {
+                                "naziv": "Varadero bar",
+                                "adresa": "Ozaljska ul. 8"
+                            },
+                            {
+                                "naziv": "Harats Irish Pub",
+                                "adresa": "Kaptol 4 Trg Petrice Kerempuha, Opatovina ul. 11"
+                            },
+                            {
+                                "naziv": "Va Bene",
+                                "adresa": "Banjolska ul. 24"
+                            },
+                            {
+                                "naziv": "Out Garden",
+                                "adresa": "Ilica 16"
+                            },
+                            {
+                                "naziv": "Allegri,",
+                                "adresa": "Ante Topića Mimare 18, Malešnica"
+                            },
+                            {
+                                "naziv": "Vetro bar \u0026 bites",
+                                "adresa": "Hektorovićeva 2"
+                            },
+                            {
+                                "naziv": "Valentino caffe bar",
+                                "adresa": "Nehajska 6"
+                            },
+                            {
+                                "naziv": "Burger\u0026Beer Bar Mrav",
+                                "adresa": "Trnsko 25A"
+                            },
+                            {
+                                "naziv": "Caffe Bar \u0026 Night Club Urban Zagreb",
+                                "adresa": "Trg J.F.Kennedya 6b"
+                            },
+                            {
+                                "naziv": "Excelente bar",
+                                "adresa": "Višnjevac ul. 3"
+                            },
+                            {
+                                "naziv": "Booze and Blues",
+                                "adresa": "Tkalčićeva 84"
+                            }]
+                        },
+                        "examples": [
+                            [{
+                                "naziv": "Out Garden",
+                                "adresa": "Ilica 16"
+                            },
+                            {
+                                "naziv": "klub Roko",
+                                "adresa": "Jarunska ul"
+                            },
+                            {
+                                "naziv": "IQ bar",
+                                "adresa": "Ul. Lavoslava Ružičke 66"
+                            }],
+                            [{
+                                "naziv": "Out Garden",
+                                "adresa": "Ilica 16"
+                            },
+                            {
+                                "naziv": "Bustan Bar",
+                                "adresa": "Varšavska 8"
+                            }],
+                            [{
+                                "naziv": "Plava Ptica caffe bar",
+                                "adresa": "Ul. kralja Držislava 4"
+                            }],
+                            [{
+                                "naziv": "Silent Caffe",
+                                "adresa": "Ul. kneza Mislava 7"
+                            }],
+                            [{
+                                "naziv": "Žabac Caffe",
+                                "adresa": "Jarunska ulica 5"
+                            }],
+                            [{
+                                "naziv": "Grey Caffe Bar",
+                                "adresa": "Gundulićeva 34"
+                            }],
+                            [{
+                                "naziv": "Vintage Industrial Bar",
+                                "adresa": "Savska cesta 160"
+                            }],
+                            [{
+                                "naziv": "Vivas bar Peščenica",
+                                "adresa": "Trg Stjepana Konzula 2"
+                            }],
+                            [{
+                                "naziv": "Backstage bar",
+                                "adresa": "Dalmatinska 5"
+                            },
+                            {
+                                "naziv": "Casual caffe",
+                                "adresa": "Petrinjska 59"
+                            },
+                            {
+                                "naziv": "Sungarden",
+                                "adresa": "Lanište 24"
+                            }],
+                            [{
+                                "naziv": "Varadero bar",
+                                "adresa": "Ozaljska ul. 8"
+                            },
+                            {
+                                "naziv": "Harats Irish Pub",
+                                "adresa": "Kaptol 4 Trg Petrice Kerempuha, Opatovina ul. 11"
+                            },
+                            {
+                                "naziv": "Va Bene",
+                                "adresa": "Banjolska ul. 24"
+                            },
+                            {
+                                "naziv": "Out Garden",
+                                "adresa": "Ilica 16"
+                            },
+                            {
+                                "naziv": "Allegri,",
+                                "adresa": "Ante Topića Mimare 18, Malešnica"
+                            }],
+                            [{
+                                "naziv": "Vetro bar \u0026 bites",
+                                "adresa": "Hektorovićeva 2"
+                            },
+                            {
+                                "naziv": "Valentino caffe bar",
+                                "adresa": "Nehajska 6"
+                            },
+                            {
+                                "naziv": "Burger\u0026Beer Bar Mrav",
+                                "adresa": "Trnsko 25A"
+                            }],
+                            [{
+                                "naziv": "Caffe Bar \u0026 Night Club Urban Zagreb",
+                                "adresa": "Trg J.F.Kennedya 6b"
+                            },
+                            {
+                                "naziv": "Excelente bar",
+                                "adresa": "Višnjevac ul. 3"
+                            },
+                            {
+                                "naziv": "Booze and Blues",
+                                "adresa": "Tkalčićeva 84"
+                            }]
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id_kviz": 1,
+                    "name": "Fast Facts Trivia",
+                    "description": "-",
+                    "popularity": "Instagram : 3281 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "6",
+                    "theme": "opće znanje",
+                    "time": "utorak, srijeda i četvrtak u 20h",
+                    "rewards": "domaćice, Jameson, nagrade za amazingu, žestice",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/123544802_2019742468156106_7474287818670168364_n.jpg?_nc_cat=108\u0026ccb=1-7\u0026_nc_sid=8631f5\u0026_nc_eui2=AeFXz5bOQeZdyaCUZug8Vpzzxi-rFcPM6ZXGL6sVw8zplbr7JEN_wb2RqHyhyXc4HU-luXa4mkby4TBkCDQSSVhA\u0026_nc_ohc=c7ljpkeeM6MAX-D2ewe\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9QGC104i-5pjGnf_CWkcsONMLM-BLD5zhtVUKJwc4c9w\u0026oe=637A54F7",
+                    "max_teams": "20-40",
+                    "lokacije": [{
+                        "naziv": "Out Garden",
+                        "adresa": "Ilica 16"
+                    },
+                    {
+                        "naziv": "klub Roko",
+                        "adresa": "Jarunska ul"
+                    },
+                    {
+                        "naziv": "IQ bar",
+                        "adresa": "Ul. Lavoslava Ružičke 66"
+                    }]
+                },
+                {
+                    "id_kviz": 2,
+                    "name": "Schlosser quiz",
+                    "description": "-",
+                    "popularity": "Instagram : 411 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "utorak, četvrtak i petak u 20h",
+                    "rewards": "žestice i pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook, Whatsapp",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/311045968_185222687335128_545662819323893267_n.jpg?_nc_cat=103\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHhl7WoTjwPTArnT2RC6G92nJEkYGufv3yckSRga5-_fCOyzatAZIsLxlhPkQxSjLx3p1CyZBmaU2ZxCgRnbMqj\u0026_nc_ohc=UjRt2L2sw6kAX--AD6p\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9YXzYpnWI84wZ6AXyuqTfY5U9kLS907vKNBqjJhG9xag\u0026oe=635C580D",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Out Garden",
+                        "adresa": "Ilica 16"
+                    },
+                    {
+                        "naziv": "Bustan Bar",
+                        "adresa": "Varšavska 8"
+                    }]
+                },
+                {
+                    "id_kviz": 3,
+                    "name": "Plava ptica",
+                    "description": "-",
+                    "popularity": "Instagram : 316 pratitelja",
+                    "duration": "≈2:30 min",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "četvrtak u 20h",
+                    "rewards": "žestice, vino i pizza",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/279843197_110405911659941_4685246366109662213_n.jpg?_nc_cat=109\u0026ccb=1-7\u0026_nc_sid=e3f864\u0026_nc_eui2=AeFlBKuHNFN5xJd0njYkopyoOc3HWKArpA05zcdYoCukDZsVl9IWDsZlgWYTybwrbSxjf4EEMDrK71BU32w71eRD\u0026_nc_ohc=Jf7dR-7hduwAX8ltUDV\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8FXhUUucyVlQW187ZJZXHn-YfoBOJh0SHniC3elEFDsg\u0026oe=635ABAB2",
+                    "max_teams": "15",
+                    "lokacije": [{
+                        "naziv": "Plava Ptica caffe bar",
+                        "adresa": "Ul. kralja Držislava 4"
+                    }]
+                },
+                {
+                    "id_kviz": 4,
+                    "name": "Silent pub kviz",
+                    "description": "-",
+                    "popularity": "Instagram : 807 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "6",
+                    "theme": "opće znanje i tematski kvizovi",
+                    "time": "srijeda/četvrtak u 20h",
+                    "rewards": "žestice, vino i pizza",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/262169768_3088949798044511_2359350930360734787_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=730e14\u0026_nc_eui2=AeGbeuOD1NURG9yEFuukiEw0zIPVEr3iL6DMg9USveIvoP_OKJc2BtT54ler20mZD5KUYSeshfAAfmM6ahNmTDgM\u0026_nc_ohc=WMsByYzFNEsAX9679Iy\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8X-Y1-3NLE0bXxe2J-EXx46a8DR-uok2y8R2D1hQd9hg\u0026oe=635B0C55",
+                    "max_teams": "15",
+                    "lokacije": [{
+                        "naziv": "Silent Caffe",
+                        "adresa": "Ul. kneza Mislava 7"
+                    }]
+                },
+                {
+                    "id_kviz": 5,
+                    "name": "Žabac",
+                    "description": "igra se liga u dvije divizije - divizija Mirko Miočić i divizija Mladost). Liga ima 30-ak kola i trenutno se igra 3. sezona. Ekipe su od 2 do 5 članova, a kotizacije nema. Pobjednike lige očekuju vrijedne nagrade, a postoje i nagrade za pobjednike svakog pojedinačnog kviza.",
+                    "popularity": "Facebook : 714 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "ponedjeljak/srijeda u 20:30h",
+                    "rewards": "pizza i pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/71908712_996116634065018_2073644815060303872_n.jpg?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGFwnBhXTXnIfHUOs2JXokylXawnmIDR0iVdrCeYgNHSPRzWay6VvPYUVlUN6EnW8H22BjgzKJFNM_XH1mbtln0\u0026_nc_ohc=K_HbBDFpdlMAX8HcYQa\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT97Ze598rjR6QnGEcTFzu1-FYhvMlZ2NycayVjDPKbR1Q\u0026oe=637E28C0",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Žabac Caffe",
+                        "adresa": "Jarunska ulica 5"
+                    }]
+                },
+                {
+                    "id_kviz": 6,
+                    "name": "JFK kviz",
+                    "description": "Pub kviz u samom centru grada, pitanja iz svih mogućih područja i dosega ljudskog i neljudskog znanja, super nagrade, velike količine šarma i super playlista.",
+                    "popularity": "Facebook : 1157 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "opće znanje i tematski kvizovi",
+                    "time": "petak u 20h",
+                    "rewards": "pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Facebook, Instagram",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/20841921_760035317534180_8649998737829076014_n.jpg?_nc_cat=104\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeFZCOu3DJ7-xnP-qEg55W75n29Y3hkEu3Ofb1jeGQS7c4JlkCgKt_CHeWzkS7VMu-Icw1udEghQRdpC9uCzqQ1u\u0026_nc_ohc=fjHw48Vdn3wAX9PHthy\u0026_nc_oc=AQmbOa2Ad0id3zvukgjpYG4xkcvmpEhPDAMhpl8khmyP7Ai4GgX1bQK2r9zD5shcUUY\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT92kBT5hL2RfilI3np6NScO33Egbt7EzRRcZIAJffeGCQ\u0026oe=637D645F",
+                    "max_teams": "25",
+                    "lokacije": [{
+                        "naziv": "Grey Caffe Bar",
+                        "adresa": "Gundulićeva 34"
+                    }]
+                },
+                {
+                    "id_kviz": 7,
+                    "name": "Vintage kviz",
+                    "description": "-",
+                    "popularity": "-",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "tematski kvizovi",
+                    "time": "petak u 20h",
+                    "rewards": "pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/21557635_1702419059829450_5868218517311846948_n.png?_nc_cat=106\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEiXK-n0hkbHLe2x8F9ARXDiIJTCsBRdveIglMKwFF296Exw3BT9Y_Br10yMwHhRSSKhkXpoLF6OZDgePzveTJo\u0026_nc_ohc=ggtnDI2DLWcAX9inJbR\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT_FlnCCpwfOt5_gaF684T584wWo1DdunpvkuM4Z1Z0gBw\u0026oe=637B03C",
+                    "max_teams": "-",
+                    "lokacije": [{
+                        "naziv": "Vintage Industrial Bar",
+                        "adresa": "Savska cesta 160"
+                    }]
+                },
+                {
+                    "id_kviz": 8,
+                    "name": "Inquizicija",
+                    "description": "Inquizicija je klasičan pub kviz općeg znanja čiji se format sastoji od 3 kruga. U svakom krugu nalaze se različite kategorije pitanja (otvorena, asocijacija, klađenje, video pitanja...) Kviz je opuštenog karaktera i pitanja su uvijek raznovrsna. Svake sezone održava se i liga. U slučaju da je ponedjeljkom državni praznik, blagdan ili utakmica Hrvatske reprezentacije ili Dinama, kviz se prebacuje na utorak ili srijedu.",
+                    "popularity": "Facebook : 97 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "4",
+                    "theme": "opće znanje",
+                    "time": "ponedjeljak u 19:45h",
+                    "rewards": "Domino Voucher, boca Antiquea, žestice",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/266693580_108460468356214_35560236528381056_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHPFoxpon56uROXJGDWyl5MohITcM3azYSiEhNwzdrNhGlXyVqCnM9egJLLD0b2kXiiQ6eXTXA33ITCdsCdm4lY\u0026_nc_ohc=1PFgtOVXqaIAX8Hz4Po\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8YFC9-6kBGbKw2kngZ698f8nFJWZQIK9I7YHIEc3GPEg\u0026oe=635AA4CD",
+                    "max_teams": "24",
+                    "lokacije": [{
+                        "naziv": "Vivas bar Peščenica",
+                        "adresa": "Trg Stjepana Konzula 2"
+                    }]
+                },
+                {
+                    "id_kviz": 9,
+                    "name": "Najgori kviz",
+                    "description": "-",
+                    "popularity": "Instagram : 180 pratitelja",
+                    "duration": "-",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "Ponedjeljak i četvrtak u 20h",
+                    "rewards": "-",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Instagram",
+                    "picture": "-",
+                    "max_teams": "-",
+                    "lokacije": [{
+                        "naziv": "Backstage bar",
+                        "adresa": "Dalmatinska 5"
+                    },
+                    {
+                        "naziv": "Casual caffe",
+                        "adresa": "Petrinjska 59"
+                    },
+                    {
+                        "naziv": "Sungarden",
+                        "adresa": "Lanište 24"
+                    }]
+                },
+                {
+                    "id_kviz": 10,
+                    "name": "Vortex Quiz Factory",
+                    "description": "-",
+                    "popularity": "Instagram : 1033 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "5",
+                    "theme": "tematski kvizovi",
+                    "time": "SKORO SVAKI DAN",
+                    "rewards": "pokloni iznenađenja",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/294604624_911264369815966_8113351615775619444_n.png?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEStjjmGmQQWQ9UFu92aCeU14fVihdSnMvXh9WKF1Kcy8HX4N3rowCj2twQdNxrT6lRQnvueZdKRX8fo1NID4s6\u0026_nc_ohc=oqTxSDw8y50AX90XcYN\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9WlJiIU8puFv3KgdZ202gIK4QNInsQ3gf6HfdBRjv4rw\u0026oe=635BD1E3",
+                    "max_teams": "-",
+                    "lokacije": [{
+                        "naziv": "Varadero bar",
+                        "adresa": "Ozaljska ul. 8"
+                    },
+                    {
+                        "naziv": "Harats Irish Pub",
+                        "adresa": "Kaptol 4 Trg Petrice Kerempuha, Opatovina ul. 11"
+                    },
+                    {
+                        "naziv": "Va Bene",
+                        "adresa": "Banjolska ul. 24"
+                    },
+                    {
+                        "naziv": "Out Garden",
+                        "adresa": "Ilica 16"
+                    },
+                    {
+                        "naziv": "Allegri,",
+                        "adresa": "Ante Topića Mimare 18, Malešnica"
+                    }]
+                },
+                {
+                    "id_kviz": 11,
+                    "name": "Animatori Sivih Stanica",
+                    "description": "Animatori Sivih Stanica ponedjeljkom u 20 sati okupljaju 300-ak kvizaša na tri lokacije u Zagrebu. (Gotovo) nemoguće dobar nagradni fond, jedinstven koncept kviza, originalna i uvijek friško napisana pitanja čekaju vas svaki ponedjeljak na SmartASS pub kvizu za samo 15 kn.",
+                    "popularity": "Facebook : 2100 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "Ponedjeljak u 20h",
+                    "rewards": "Laser Tag, turu skakanja, escape room, poklon bonovi i ostala iznenađenja",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/277369916_5315953908434909_940276962417417877_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGcUS-XvsJvm9OfJDEeuYNxsCeTT2qhphKwJ5NPaqGmEiPzETKJJ9Tt3fX5b9qCwyx7rXABO41tMn_c9Aq-03ni\u0026_nc_ohc=upcuw4g4g6gAX_7JOKv\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8tkt4k_X0uu3lHP911HeY38V1s7VIx3i_wcC2vAKSmgA\u0026oe=635ACEF4",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Vetro bar \u0026 bites",
+                        "adresa": "Hektorovićeva 2"
+                    },
+                    {
+                        "naziv": "Valentino caffe bar",
+                        "adresa": "Nehajska 6"
+                    },
+                    {
+                        "naziv": "Burger\u0026Beer Bar Mrav",
+                        "adresa": "Trnsko 25A"
+                    }]
+                },
+                {
+                    "id_kviz": 12,
+                    "name": "Urbana kviz priča",
+                    "description": "-",
+                    "popularity": "Instagram : 2309 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "Četvrtak u 20h",
+                    "rewards": "Pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/275300065_305222551598877_2943176537359294575_n.jpg?_nc_cat=102\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEqfRs4nyqgrgldv7PMoNE_gs7dSNAyywaCzt1I0DLLBkxjYwMpqPerauHPgDDj0l7FJhqz6VWvgyy23EM-hJyr\u0026_nc_ohc=Tg78FQVCHLYAX9Fm7BJ\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8KoRrV4IiCSxRhaaiazQ85ALBZ_T2sBGKItOMjaVIZVg\u0026oe=635C194E",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Caffe Bar \u0026 Night Club Urban Zagreb",
+                        "adresa": "Trg J.F.Kennedya 6b"
+                    },
+                    {
+                        "naziv": "Excelente bar",
+                        "adresa": "Višnjevac ul. 3"
+                    },
+                    {
+                        "naziv": "Booze and Blues",
+                        "adresa": "Tkalčićeva 84"
+                    }]
+                }]
+            },
+            "examples": [
+                [{
+                    "id_kviz": 1,
+                    "name": "Fast Facts Trivia",
+                    "description": "-",
+                    "popularity": "Instagram : 3281 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "6",
+                    "theme": "opće znanje",
+                    "time": "utorak, srijeda i četvrtak u 20h",
+                    "rewards": "domaćice, Jameson, nagrade za amazingu, žestice",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/123544802_2019742468156106_7474287818670168364_n.jpg?_nc_cat=108\u0026ccb=1-7\u0026_nc_sid=8631f5\u0026_nc_eui2=AeFXz5bOQeZdyaCUZug8Vpzzxi-rFcPM6ZXGL6sVw8zplbr7JEN_wb2RqHyhyXc4HU-luXa4mkby4TBkCDQSSVhA\u0026_nc_ohc=c7ljpkeeM6MAX-D2ewe\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9QGC104i-5pjGnf_CWkcsONMLM-BLD5zhtVUKJwc4c9w\u0026oe=637A54F7",
+                    "max_teams": "20-40",
+                    "lokacije": [{
+                        "naziv": "Out Garden",
+                        "adresa": "Ilica 16"
+                    },
+                    {
+                        "naziv": "klub Roko",
+                        "adresa": "Jarunska ul"
+                    },
+                    {
+                        "naziv": "IQ bar",
+                        "adresa": "Ul. Lavoslava Ružičke 66"
+                    }]
+                },
+                {
+                    "id_kviz": 2,
+                    "name": "Schlosser quiz",
+                    "description": "-",
+                    "popularity": "Instagram : 411 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "utorak, četvrtak i petak u 20h",
+                    "rewards": "žestice i pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook, Whatsapp",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/311045968_185222687335128_545662819323893267_n.jpg?_nc_cat=103\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHhl7WoTjwPTArnT2RC6G92nJEkYGufv3yckSRga5-_fCOyzatAZIsLxlhPkQxSjLx3p1CyZBmaU2ZxCgRnbMqj\u0026_nc_ohc=UjRt2L2sw6kAX--AD6p\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9YXzYpnWI84wZ6AXyuqTfY5U9kLS907vKNBqjJhG9xag\u0026oe=635C580D",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Out Garden",
+                        "adresa": "Ilica 16"
+                    },
+                    {
+                        "naziv": "Bustan Bar",
+                        "adresa": "Varšavska 8"
+                    }]
+                },
+                {
+                    "id_kviz": 3,
+                    "name": "Plava ptica",
+                    "description": "-",
+                    "popularity": "Instagram : 316 pratitelja",
+                    "duration": "≈2:30 min",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "četvrtak u 20h",
+                    "rewards": "žestice, vino i pizza",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/279843197_110405911659941_4685246366109662213_n.jpg?_nc_cat=109\u0026ccb=1-7\u0026_nc_sid=e3f864\u0026_nc_eui2=AeFlBKuHNFN5xJd0njYkopyoOc3HWKArpA05zcdYoCukDZsVl9IWDsZlgWYTybwrbSxjf4EEMDrK71BU32w71eRD\u0026_nc_ohc=Jf7dR-7hduwAX8ltUDV\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8FXhUUucyVlQW187ZJZXHn-YfoBOJh0SHniC3elEFDsg\u0026oe=635ABAB2",
+                    "max_teams": "15",
+                    "lokacije": [{
+                        "naziv": "Plava Ptica caffe bar",
+                        "adresa": "Ul. kralja Držislava 4"
+                    }]
+                },
+                {
+                    "id_kviz": 4,
+                    "name": "Silent pub kviz",
+                    "description": "-",
+                    "popularity": "Instagram : 807 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "6",
+                    "theme": "opće znanje i tematski kvizovi",
+                    "time": "srijeda/četvrtak u 20h",
+                    "rewards": "žestice, vino i pizza",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/262169768_3088949798044511_2359350930360734787_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=730e14\u0026_nc_eui2=AeGbeuOD1NURG9yEFuukiEw0zIPVEr3iL6DMg9USveIvoP_OKJc2BtT54ler20mZD5KUYSeshfAAfmM6ahNmTDgM\u0026_nc_ohc=WMsByYzFNEsAX9679Iy\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8X-Y1-3NLE0bXxe2J-EXx46a8DR-uok2y8R2D1hQd9hg\u0026oe=635B0C55",
+                    "max_teams": "15",
+                    "lokacije": [{
+                        "naziv": "Silent Caffe",
+                        "adresa": "Ul. kneza Mislava 7"
+                    }]
+                },
+                {
+                    "id_kviz": 5,
+                    "name": "Žabac",
+                    "description": "igra se liga u dvije divizije - divizija Mirko Miočić i divizija Mladost). Liga ima 30-ak kola i trenutno se igra 3. sezona. Ekipe su od 2 do 5 članova, a kotizacije nema. Pobjednike lige očekuju vrijedne nagrade, a postoje i nagrade za pobjednike svakog pojedinačnog kviza.",
+                    "popularity": "Facebook : 714 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "ponedjeljak/srijeda u 20:30h",
+                    "rewards": "pizza i pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/71908712_996116634065018_2073644815060303872_n.jpg?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGFwnBhXTXnIfHUOs2JXokylXawnmIDR0iVdrCeYgNHSPRzWay6VvPYUVlUN6EnW8H22BjgzKJFNM_XH1mbtln0\u0026_nc_ohc=K_HbBDFpdlMAX8HcYQa\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT97Ze598rjR6QnGEcTFzu1-FYhvMlZ2NycayVjDPKbR1Q\u0026oe=637E28C0",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Žabac Caffe",
+                        "adresa": "Jarunska ulica 5"
+                    }]
+                },
+                {
+                    "id_kviz": 6,
+                    "name": "JFK kviz",
+                    "description": "Pub kviz u samom centru grada, pitanja iz svih mogućih područja i dosega ljudskog i neljudskog znanja, super nagrade, velike količine šarma i super playlista.",
+                    "popularity": "Facebook : 1157 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "opće znanje i tematski kvizovi",
+                    "time": "petak u 20h",
+                    "rewards": "pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Facebook, Instagram",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/20841921_760035317534180_8649998737829076014_n.jpg?_nc_cat=104\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeFZCOu3DJ7-xnP-qEg55W75n29Y3hkEu3Ofb1jeGQS7c4JlkCgKt_CHeWzkS7VMu-Icw1udEghQRdpC9uCzqQ1u\u0026_nc_ohc=fjHw48Vdn3wAX9PHthy\u0026_nc_oc=AQmbOa2Ad0id3zvukgjpYG4xkcvmpEhPDAMhpl8khmyP7Ai4GgX1bQK2r9zD5shcUUY\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT92kBT5hL2RfilI3np6NScO33Egbt7EzRRcZIAJffeGCQ\u0026oe=637D645F",
+                    "max_teams": "25",
+                    "lokacije": [{
+                        "naziv": "Grey Caffe Bar",
+                        "adresa": "Gundulićeva 34"
+                    }]
+                },
+                {
+                    "id_kviz": 7,
+                    "name": "Vintage kviz",
+                    "description": "-",
+                    "popularity": "-",
+                    "duration": "≈2h",
+                    "team_number": "5",
+                    "theme": "tematski kvizovi",
+                    "time": "petak u 20h",
+                    "rewards": "pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/21557635_1702419059829450_5868218517311846948_n.png?_nc_cat=106\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEiXK-n0hkbHLe2x8F9ARXDiIJTCsBRdveIglMKwFF296Exw3BT9Y_Br10yMwHhRSSKhkXpoLF6OZDgePzveTJo\u0026_nc_ohc=ggtnDI2DLWcAX9inJbR\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT_FlnCCpwfOt5_gaF684T584wWo1DdunpvkuM4Z1Z0gBw\u0026oe=637B03C",
+                    "max_teams": "-",
+                    "lokacije": [{
+                        "naziv": "Vintage Industrial Bar",
+                        "adresa": "Savska cesta 160"
+                    }]
+                },
+                {
+                    "id_kviz": 8,
+                    "name": "Inquizicija",
+                    "description": "Inquizicija je klasičan pub kviz općeg znanja čiji se format sastoji od 3 kruga. U svakom krugu nalaze se različite kategorije pitanja (otvorena, asocijacija, klađenje, video pitanja...) Kviz je opuštenog karaktera i pitanja su uvijek raznovrsna. Svake sezone održava se i liga. U slučaju da je ponedjeljkom državni praznik, blagdan ili utakmica Hrvatske reprezentacije ili Dinama, kviz se prebacuje na utorak ili srijedu.",
+                    "popularity": "Facebook : 97 pratitelja",
+                    "duration": "≈2h",
+                    "team_number": "4",
+                    "theme": "opće znanje",
+                    "time": "ponedjeljak u 19:45h",
+                    "rewards": "Domino Voucher, boca Antiquea, žestice",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/266693580_108460468356214_35560236528381056_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHPFoxpon56uROXJGDWyl5MohITcM3azYSiEhNwzdrNhGlXyVqCnM9egJLLD0b2kXiiQ6eXTXA33ITCdsCdm4lY\u0026_nc_ohc=1PFgtOVXqaIAX8Hz4Po\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8YFC9-6kBGbKw2kngZ698f8nFJWZQIK9I7YHIEc3GPEg\u0026oe=635AA4CD",
+                    "max_teams": "24",
+                    "lokacije": [{
+                        "naziv": "Vivas bar Peščenica",
+                        "adresa": "Trg Stjepana Konzula 2"
+                    }]
+                },
+                {
+                    "id_kviz": 9,
+                    "name": "Najgori kviz",
+                    "description": "-",
+                    "popularity": "Instagram : 180 pratitelja",
+                    "duration": "-",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "Ponedjeljak i četvrtak u 20h",
+                    "rewards": "-",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Instagram",
+                    "picture": "-",
+                    "max_teams": "-",
+                    "lokacije": [{
+                        "naziv": "Backstage bar",
+                        "adresa": "Dalmatinska 5"
+                    },
+                    {
+                        "naziv": "Casual caffe",
+                        "adresa": "Petrinjska 59"
+                    },
+                    {
+                        "naziv": "Sungarden",
+                        "adresa": "Lanište 24"
+                    }]
+                },
+                {
+                    "id_kviz": 10,
+                    "name": "Vortex Quiz Factory",
+                    "description": "-",
+                    "popularity": "Instagram : 1033 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "5",
+                    "theme": "tematski kvizovi",
+                    "time": "SKORO SVAKI DAN",
+                    "rewards": "pokloni iznenađenja",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/294604624_911264369815966_8113351615775619444_n.png?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEStjjmGmQQWQ9UFu92aCeU14fVihdSnMvXh9WKF1Kcy8HX4N3rowCj2twQdNxrT6lRQnvueZdKRX8fo1NID4s6\u0026_nc_ohc=oqTxSDw8y50AX90XcYN\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9WlJiIU8puFv3KgdZ202gIK4QNInsQ3gf6HfdBRjv4rw\u0026oe=635BD1E3",
+                    "max_teams": "-",
+                    "lokacije": [{
+                        "naziv": "Varadero bar",
+                        "adresa": "Ozaljska ul. 8"
+                    },
+                    {
+                        "naziv": "Harats Irish Pub",
+                        "adresa": "Kaptol 4 Trg Petrice Kerempuha, Opatovina ul. 11"
+                    },
+                    {
+                        "naziv": "Va Bene",
+                        "adresa": "Banjolska ul. 24"
+                    },
+                    {
+                        "naziv": "Out Garden",
+                        "adresa": "Ilica 16"
+                    },
+                    {
+                        "naziv": "Allegri,",
+                        "adresa": "Ante Topića Mimare 18, Malešnica"
+                    }]
+                },
+                {
+                    "id_kviz": 11,
+                    "name": "Animatori Sivih Stanica",
+                    "description": "Animatori Sivih Stanica ponedjeljkom u 20 sati okupljaju 300-ak kvizaša na tri lokacije u Zagrebu. (Gotovo) nemoguće dobar nagradni fond, jedinstven koncept kviza, originalna i uvijek friško napisana pitanja čekaju vas svaki ponedjeljak na SmartASS pub kvizu za samo 15 kn.",
+                    "popularity": "Facebook : 2100 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "Ponedjeljak u 20h",
+                    "rewards": "Laser Tag, turu skakanja, escape room, poklon bonovi i ostala iznenađenja",
+                    "registrarion_fee": "15kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/277369916_5315953908434909_940276962417417877_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGcUS-XvsJvm9OfJDEeuYNxsCeTT2qhphKwJ5NPaqGmEiPzETKJJ9Tt3fX5b9qCwyx7rXABO41tMn_c9Aq-03ni\u0026_nc_ohc=upcuw4g4g6gAX_7JOKv\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8tkt4k_X0uu3lHP911HeY38V1s7VIx3i_wcC2vAKSmgA\u0026oe=635ACEF4",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Vetro bar \u0026 bites",
+                        "adresa": "Hektorovićeva 2"
+                    },
+                    {
+                        "naziv": "Valentino caffe bar",
+                        "adresa": "Nehajska 6"
+                    },
+                    {
+                        "naziv": "Burger\u0026Beer Bar Mrav",
+                        "adresa": "Trnsko 25A"
+                    }]
+                },
+                {
+                    "id_kviz": 12,
+                    "name": "Urbana kviz priča",
+                    "description": "-",
+                    "popularity": "Instagram : 2309 pratitelja",
+                    "duration": "≈2:30min",
+                    "team_number": "5",
+                    "theme": "opće znanje",
+                    "time": "Četvrtak u 20h",
+                    "rewards": "Pokloni iznenađenja",
+                    "registrarion_fee": "10kn po osobi",
+                    "contact": "Instagram, Facebook",
+                    "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/275300065_305222551598877_2943176537359294575_n.jpg?_nc_cat=102\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEqfRs4nyqgrgldv7PMoNE_gs7dSNAyywaCzt1I0DLLBkxjYwMpqPerauHPgDDj0l7FJhqz6VWvgyy23EM-hJyr\u0026_nc_ohc=Tg78FQVCHLYAX9Fm7BJ\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8KoRrV4IiCSxRhaaiazQ85ALBZ_T2sBGKItOMjaVIZVg\u0026oe=635C194E",
+                    "max_teams": "30",
+                    "lokacije": [{
+                        "naziv": "Caffe Bar \u0026 Night Club Urban Zagreb",
+                        "adresa": "Trg J.F.Kennedya 6b"
+                    },
+                    {
+                        "naziv": "Excelente bar",
+                        "adresa": "Višnjevac ul. 3"
+                    },
+                    {
+                        "naziv": "Booze and Blues",
+                        "adresa": "Tkalčićeva 84"
+                    }]
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "kvizovi": [{
+            "id_kviz": 1,
+            "name": "Fast Facts Trivia",
+            "description": "-",
+            "popularity": "Instagram : 3281 pratitelja",
+            "duration": "≈2:30min",
+            "team_number": "6",
+            "theme": "opće znanje",
+            "time": "utorak, srijeda i četvrtak u 20h",
+            "rewards": "domaćice, Jameson, nagrade za amazingu, žestice",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Instagram, Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/123544802_2019742468156106_7474287818670168364_n.jpg?_nc_cat=108\u0026ccb=1-7\u0026_nc_sid=8631f5\u0026_nc_eui2=AeFXz5bOQeZdyaCUZug8Vpzzxi-rFcPM6ZXGL6sVw8zplbr7JEN_wb2RqHyhyXc4HU-luXa4mkby4TBkCDQSSVhA\u0026_nc_ohc=c7ljpkeeM6MAX-D2ewe\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9QGC104i-5pjGnf_CWkcsONMLM-BLD5zhtVUKJwc4c9w\u0026oe=637A54F7",
+            "max_teams": "20-40",
+            "lokacije": [{
+                "naziv": "Out Garden",
+                "adresa": "Ilica 16"
+            },
+            {
+                "naziv": "klub Roko",
+                "adresa": "Jarunska ul"
+            },
+            {
+                "naziv": "IQ bar",
+                "adresa": "Ul. Lavoslava Ružičke 66"
+            }]
+        },
+        {
+            "id_kviz": 2,
+            "name": "Schlosser quiz",
+            "description": "-",
+            "popularity": "Instagram : 411 pratitelja",
+            "duration": "≈2h",
+            "team_number": "5",
+            "theme": "opće znanje",
+            "time": "utorak, četvrtak i petak u 20h",
+            "rewards": "žestice i pokloni iznenađenja",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Instagram, Facebook, Whatsapp",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/311045968_185222687335128_545662819323893267_n.jpg?_nc_cat=103\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHhl7WoTjwPTArnT2RC6G92nJEkYGufv3yckSRga5-_fCOyzatAZIsLxlhPkQxSjLx3p1CyZBmaU2ZxCgRnbMqj\u0026_nc_ohc=UjRt2L2sw6kAX--AD6p\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9YXzYpnWI84wZ6AXyuqTfY5U9kLS907vKNBqjJhG9xag\u0026oe=635C580D",
+            "max_teams": "30",
+            "lokacije": [{
+                "naziv": "Out Garden",
+                "adresa": "Ilica 16"
+            },
+            {
+                "naziv": "Bustan Bar",
+                "adresa": "Varšavska 8"
+            }]
+        },
+        {
+            "id_kviz": 3,
+            "name": "Plava ptica",
+            "description": "-",
+            "popularity": "Instagram : 316 pratitelja",
+            "duration": "≈2:30 min",
+            "team_number": "5",
+            "theme": "opće znanje",
+            "time": "četvrtak u 20h",
+            "rewards": "žestice, vino i pizza",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Instagram, Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/279843197_110405911659941_4685246366109662213_n.jpg?_nc_cat=109\u0026ccb=1-7\u0026_nc_sid=e3f864\u0026_nc_eui2=AeFlBKuHNFN5xJd0njYkopyoOc3HWKArpA05zcdYoCukDZsVl9IWDsZlgWYTybwrbSxjf4EEMDrK71BU32w71eRD\u0026_nc_ohc=Jf7dR-7hduwAX8ltUDV\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8FXhUUucyVlQW187ZJZXHn-YfoBOJh0SHniC3elEFDsg\u0026oe=635ABAB2",
+            "max_teams": "15",
+            "lokacije": [{
+                "naziv": "Plava Ptica caffe bar",
+                "adresa": "Ul. kralja Držislava 4"
+            }]
+        },
+        {
+            "id_kviz": 4,
+            "name": "Silent pub kviz",
+            "description": "-",
+            "popularity": "Instagram : 807 pratitelja",
+            "duration": "≈2h",
+            "team_number": "6",
+            "theme": "opće znanje i tematski kvizovi",
+            "time": "srijeda/četvrtak u 20h",
+            "rewards": "žestice, vino i pizza",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Instagram, Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/262169768_3088949798044511_2359350930360734787_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=730e14\u0026_nc_eui2=AeGbeuOD1NURG9yEFuukiEw0zIPVEr3iL6DMg9USveIvoP_OKJc2BtT54ler20mZD5KUYSeshfAAfmM6ahNmTDgM\u0026_nc_ohc=WMsByYzFNEsAX9679Iy\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8X-Y1-3NLE0bXxe2J-EXx46a8DR-uok2y8R2D1hQd9hg\u0026oe=635B0C55",
+            "max_teams": "15",
+            "lokacije": [{
+                "naziv": "Silent Caffe",
+                "adresa": "Ul. kneza Mislava 7"
+            }]
+        },
+        {
+            "id_kviz": 5,
+            "name": "Žabac",
+            "description": "igra se liga u dvije divizije - divizija Mirko Miočić i divizija Mladost). Liga ima 30-ak kola i trenutno se igra 3. sezona. Ekipe su od 2 do 5 članova, a kotizacije nema. Pobjednike lige očekuju vrijedne nagrade, a postoje i nagrade za pobjednike svakog pojedinačnog kviza.",
+            "popularity": "Facebook : 714 pratitelja",
+            "duration": "≈2h",
+            "team_number": "5",
+            "theme": "opće znanje",
+            "time": "ponedjeljak/srijeda u 20:30h",
+            "rewards": "pizza i pokloni iznenađenja",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/71908712_996116634065018_2073644815060303872_n.jpg?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGFwnBhXTXnIfHUOs2JXokylXawnmIDR0iVdrCeYgNHSPRzWay6VvPYUVlUN6EnW8H22BjgzKJFNM_XH1mbtln0\u0026_nc_ohc=K_HbBDFpdlMAX8HcYQa\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT97Ze598rjR6QnGEcTFzu1-FYhvMlZ2NycayVjDPKbR1Q\u0026oe=637E28C0",
+            "max_teams": "30",
+            "lokacije": [{
+                "naziv": "Žabac Caffe",
+                "adresa": "Jarunska ulica 5"
+            }]
+        },
+        {
+            "id_kviz": 6,
+            "name": "JFK kviz",
+            "description": "Pub kviz u samom centru grada, pitanja iz svih mogućih područja i dosega ljudskog i neljudskog znanja, super nagrade, velike količine šarma i super playlista.",
+            "popularity": "Facebook : 1157 pratitelja",
+            "duration": "≈2h",
+            "team_number": "5",
+            "theme": "opće znanje i tematski kvizovi",
+            "time": "petak u 20h",
+            "rewards": "pokloni iznenađenja",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Facebook, Instagram",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/20841921_760035317534180_8649998737829076014_n.jpg?_nc_cat=104\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeFZCOu3DJ7-xnP-qEg55W75n29Y3hkEu3Ofb1jeGQS7c4JlkCgKt_CHeWzkS7VMu-Icw1udEghQRdpC9uCzqQ1u\u0026_nc_ohc=fjHw48Vdn3wAX9PHthy\u0026_nc_oc=AQmbOa2Ad0id3zvukgjpYG4xkcvmpEhPDAMhpl8khmyP7Ai4GgX1bQK2r9zD5shcUUY\u0026tn=dpYhfGfGGEsEYYSE\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT92kBT5hL2RfilI3np6NScO33Egbt7EzRRcZIAJffeGCQ\u0026oe=637D645F",
+            "max_teams": "25",
+            "lokacije": [{
+                "naziv": "Grey Caffe Bar",
+                "adresa": "Gundulićeva 34"
+            }]
+        },
+        {
+            "id_kviz": 7,
+            "name": "Vintage kviz",
+            "description": "-",
+            "popularity": "-",
+            "duration": "≈2h",
+            "team_number": "5",
+            "theme": "tematski kvizovi",
+            "time": "petak u 20h",
+            "rewards": "pokloni iznenađenja",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t1.18169-9/21557635_1702419059829450_5868218517311846948_n.png?_nc_cat=106\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEiXK-n0hkbHLe2x8F9ARXDiIJTCsBRdveIglMKwFF296Exw3BT9Y_Br10yMwHhRSSKhkXpoLF6OZDgePzveTJo\u0026_nc_ohc=ggtnDI2DLWcAX9inJbR\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT_FlnCCpwfOt5_gaF684T584wWo1DdunpvkuM4Z1Z0gBw\u0026oe=637B03C",
+            "max_teams": "-",
+            "lokacije": [{
+                "naziv": "Vintage Industrial Bar",
+                "adresa": "Savska cesta 160"
+            }]
+        },
+        {
+            "id_kviz": 8,
+            "name": "Inquizicija",
+            "description": "Inquizicija je klasičan pub kviz općeg znanja čiji se format sastoji od 3 kruga. U svakom krugu nalaze se različite kategorije pitanja (otvorena, asocijacija, klađenje, video pitanja...) Kviz je opuštenog karaktera i pitanja su uvijek raznovrsna. Svake sezone održava se i liga. U slučaju da je ponedjeljkom državni praznik, blagdan ili utakmica Hrvatske reprezentacije ili Dinama, kviz se prebacuje na utorak ili srijedu.",
+            "popularity": "Facebook : 97 pratitelja",
+            "duration": "≈2h",
+            "team_number": "4",
+            "theme": "opće znanje",
+            "time": "ponedjeljak u 19:45h",
+            "rewards": "Domino Voucher, boca Antiquea, žestice",
+            "registrarion_fee": "15kn po osobi",
+            "contact": "Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/266693580_108460468356214_35560236528381056_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeHPFoxpon56uROXJGDWyl5MohITcM3azYSiEhNwzdrNhGlXyVqCnM9egJLLD0b2kXiiQ6eXTXA33ITCdsCdm4lY\u0026_nc_ohc=1PFgtOVXqaIAX8Hz4Po\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8YFC9-6kBGbKw2kngZ698f8nFJWZQIK9I7YHIEc3GPEg\u0026oe=635AA4CD",
+            "max_teams": "24",
+            "lokacije": [{
+                "naziv": "Vivas bar Peščenica",
+                "adresa": "Trg Stjepana Konzula 2"
+            }]
+        },
+        {
+            "id_kviz": 9,
+            "name": "Najgori kviz",
+            "description": "-",
+            "popularity": "Instagram : 180 pratitelja",
+            "duration": "-",
+            "team_number": "5",
+            "theme": "opće znanje",
+            "time": "Ponedjeljak i četvrtak u 20h",
+            "rewards": "-",
+            "registrarion_fee": "15kn po osobi",
+            "contact": "Instagram",
+            "picture": "-",
+            "max_teams": "-",
+            "lokacije": [{
+                "naziv": "Backstage bar",
+                "adresa": "Dalmatinska 5"
+            },
+            {
+                "naziv": "Casual caffe",
+                "adresa": "Petrinjska 59"
+            },
+            {
+                "naziv": "Sungarden",
+                "adresa": "Lanište 24"
+            }]
+        },
+        {
+            "id_kviz": 10,
+            "name": "Vortex Quiz Factory",
+            "description": "-",
+            "popularity": "Instagram : 1033 pratitelja",
+            "duration": "≈2:30min",
+            "team_number": "5",
+            "theme": "tematski kvizovi",
+            "time": "SKORO SVAKI DAN",
+            "rewards": "pokloni iznenađenja",
+            "registrarion_fee": "15kn po osobi",
+            "contact": "Instagram, Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/294604624_911264369815966_8113351615775619444_n.png?_nc_cat=107\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEStjjmGmQQWQ9UFu92aCeU14fVihdSnMvXh9WKF1Kcy8HX4N3rowCj2twQdNxrT6lRQnvueZdKRX8fo1NID4s6\u0026_nc_ohc=oqTxSDw8y50AX90XcYN\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT9WlJiIU8puFv3KgdZ202gIK4QNInsQ3gf6HfdBRjv4rw\u0026oe=635BD1E3",
+            "max_teams": "-",
+            "lokacije": [{
+                "naziv": "Varadero bar",
+                "adresa": "Ozaljska ul. 8"
+            },
+            {
+                "naziv": "Harats Irish Pub",
+                "adresa": "Kaptol 4 Trg Petrice Kerempuha, Opatovina ul. 11"
+            },
+            {
+                "naziv": "Va Bene",
+                "adresa": "Banjolska ul. 24"
+            },
+            {
+                "naziv": "Out Garden",
+                "adresa": "Ilica 16"
+            },
+            {
+                "naziv": "Allegri,",
+                "adresa": "Ante Topića Mimare 18, Malešnica"
+            }]
+        },
+        {
+            "id_kviz": 11,
+            "name": "Animatori Sivih Stanica",
+            "description": "Animatori Sivih Stanica ponedjeljkom u 20 sati okupljaju 300-ak kvizaša na tri lokacije u Zagrebu. (Gotovo) nemoguće dobar nagradni fond, jedinstven koncept kviza, originalna i uvijek friško napisana pitanja čekaju vas svaki ponedjeljak na SmartASS pub kvizu za samo 15 kn.",
+            "popularity": "Facebook : 2100 pratitelja",
+            "duration": "≈2:30min",
+            "team_number": "5",
+            "theme": "opće znanje",
+            "time": "Ponedjeljak u 20h",
+            "rewards": "Laser Tag, turu skakanja, escape room, poklon bonovi i ostala iznenađenja",
+            "registrarion_fee": "15kn po osobi",
+            "contact": "Instagram, Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/277369916_5315953908434909_940276962417417877_n.jpg?_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeGcUS-XvsJvm9OfJDEeuYNxsCeTT2qhphKwJ5NPaqGmEiPzETKJJ9Tt3fX5b9qCwyx7rXABO41tMn_c9Aq-03ni\u0026_nc_ohc=upcuw4g4g6gAX_7JOKv\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8tkt4k_X0uu3lHP911HeY38V1s7VIx3i_wcC2vAKSmgA\u0026oe=635ACEF4",
+            "max_teams": "30",
+            "lokacije": [{
+                "naziv": "Vetro bar \u0026 bites",
+                "adresa": "Hektorovićeva 2"
+            },
+            {
+                "naziv": "Valentino caffe bar",
+                "adresa": "Nehajska 6"
+            },
+            {
+                "naziv": "Burger\u0026Beer Bar Mrav",
+                "adresa": "Trnsko 25A"
+            }]
+        },
+        {
+            "id_kviz": 12,
+            "name": "Urbana kviz priča",
+            "description": "-",
+            "popularity": "Instagram : 2309 pratitelja",
+            "duration": "≈2:30min",
+            "team_number": "5",
+            "theme": "opće znanje",
+            "time": "Četvrtak u 20h",
+            "rewards": "Pokloni iznenađenja",
+            "registrarion_fee": "10kn po osobi",
+            "contact": "Instagram, Facebook",
+            "picture": "https://scontent.fzag1-2.fna.fbcdn.net/v/t39.30808-6/275300065_305222551598877_2943176537359294575_n.jpg?_nc_cat=102\u0026ccb=1-7\u0026_nc_sid=09cbfe\u0026_nc_eui2=AeEqfRs4nyqgrgldv7PMoNE_gs7dSNAyywaCzt1I0DLLBkxjYwMpqPerauHPgDDj0l7FJhqz6VWvgyy23EM-hJyr\u0026_nc_ohc=Tg78FQVCHLYAX9Fm7BJ\u0026_nc_ht=scontent.fzag1-2.fna\u0026oh=00_AT8KoRrV4IiCSxRhaaiazQ85ALBZ_T2sBGKItOMjaVIZVg\u0026oe=635C194E",
+            "max_teams": "30",
+            "lokacije": [{
+                "naziv": "Caffe Bar \u0026 Night Club Urban Zagreb",
+                "adresa": "Trg J.F.Kennedya 6b"
+            },
+            {
+                "naziv": "Excelente bar",
+                "adresa": "Višnjevac ul. 3"
+            },
+            {
+                "naziv": "Booze and Blues",
+                "adresa": "Tkalčićeva 84"
+            }]
+        }]
+    }]
+}

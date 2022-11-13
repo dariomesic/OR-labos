@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<div class="table-data">
+    <h1><b><%= title %></b></h1>
+    <select id="parameters" style="font-size: 18px;">
+      <option selected="selected" value="-1">All features</option>
+      <option value="0">id_kviz</option>
+      <option value="1">name</option>
+      <option value="2">description</option>
+      <option value="3">popularity</option>
+      <option value="4">duration</option>
+      <option value="5">team_number</option>
+      <option value="6">theme</option>
+      <option value="7">time</option>
+      <option value="8">rewards</option>
+      <option value="9">registrarion_fee</option>
+      <option value="10">contact</option>
+      <option value="11">picture</option>
+      <option value="12">max_teams</option>
+
+    </select>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by feature.." title="Type in a name">
+        <table id="myTable">
+          <thead>
+            <tr class="header">
+              <th>Id</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Popularity</th>
+              <th>Duration</th>
+              <th>Team Number</th>
+              <th>Theme</th>
+              <th>Time</th>
+              <th>Rewards</th>
+              <th>Registrarion Fee</th>
+              <th>Contact</th>
+              <th>Picture</th>
+              <th>Max Teams</th>
+              <th>Locations</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+    </table>
+    <button type="button" onclick="tableToCSV()">
+        download CSV
+    </button>
+    <button type="button" onclick="tableToJSON()">
+      download JSON
+  </button>
+  </div>
+</html>
+
+<script>
+  
+
+    $(document).ready(function(){
+
+    load_data();
+
+    function load_data()
+    {
+        $.ajax({
+            url:"http://localhost:8080/action",
+            method:"POST",
+            data:{action:'fetch'},
+            dataType : "JSON",
+            success:function(data)
+            {
+                var html = '';
+
+                console.log(data)
+
+                if(data.data.rows.length > 0)
+                {
+                    for(var count = 0; count < data.data.rows.length; count++)
+                    {
+                        html += `
+                        <tr>
+                            <td>`+data.data.rows[count].id_kviz+`</td>
+                            <td>`+data.data.rows[count].name+`</td>
+                            <td>`+data.data.rows[count].description+`</td>
+                            <td>`+data.data.rows[count].popularity+`</td>
+                            <td>`+data.data.rows[count].duration+`</td>
+                            <td>`+data.data.rows[count].team_number+`</td>
+                            <td>`+data.data.rows[count].theme+`</td>
+                            <td>`+data.data.rows[count].time+`</td>
+                            <td>`+data.data.rows[count].rewards+`</td>
+                            <td>`+data.data.rows[count].registrarion_fee+`</td>
+                            <td>`+data.data.rows[count].contact+`</td>
+                            <td>`+data.data.rows[count].picture+`</td>
+                            <td>`+data.data.rows[count].max_teams+`</td>
+                            <td>`+data.data.rows[count].lokacije+`</td>
+                            <td></td>
+                        </tr>
+                        `;
+                    }
+                }
+
+                $('#myTable tbody').html(html);
+            }
+        });
+    }
+
+    });
+
+
+    function myFunction() {
+      var input, filter, table, tr, td, cell, i, j, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      selected = document.getElementById("parameters").value;
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 1; i < tr.length; i++) {
+        // Hide the row initially.
+        tr[i].style.display = "none";
+        if(selected == -1){
+          td = tr[i].getElementsByTagName("td")
+          for (var j = 0; j < td.length; j++) {
+          cell = tr[i].getElementsByTagName("td")[j];
+          if (cell) {
+            if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              break;
+            } 
+          }
+        }
+        }
+
+        else{
+          td = tr[i].getElementsByTagName("td")[selected];
+          if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+          }
+        }
+
+      }
+    }
+    
+      function tableToCSV() {
+
+        // Variable to store the final csv data
+        var csv_data = [];
+
+        // Get each row data
+        var rows = document.getElementsByTagName('tr');
+        for (var i = 0; i < rows.length; i++) {
+
+            // Get each column data
+            var cols = rows[i].querySelectorAll('td,th');
+
+            // Stores each csv row data
+            var csvrow = [];
+            for (var j = 0; j < cols.length; j++) {
+
+                // Get the text data of each cell
+                // of a row and push it to csvrow
+                csvrow.push(cols[j].innerHTML);
+            }
+
+            // Combine each column value with comma
+            csv_data.push(csvrow.join(","));
+        }
+
+        // Combine each row data with new line character
+        csv_data = csv_data.join('\n');
+
+        // Call this function to download csv file
+        downloadCSVFile(csv_data);
+
+      }
+
+      function downloadCSVFile(csv_data) {
+
+        // Create CSV file object and feed
+        // our csv_data into it
+        CSVFile = new Blob([csv_data], {
+            type: "text/csv"
+        });
+
+        // Create to temporary link to initiate
+        // download process
+        var temp_link = document.createElement('a');
+
+        // Download csv file
+        temp_link.download = "GfG.csv";
+        var url = window.URL.createObjectURL(CSVFile);
+        temp_link.href = url;
+
+        // This link should not be displayed
+        temp_link.style.display = "none";
+        document.body.appendChild(temp_link);
+
+        // Automatically click the link to
+        // trigger download
+        temp_link.click();
+        document.body.removeChild(temp_link);
+      }
+
+      function tableToJSON(){
+        // Loop through grabbing everything
+        var myRows = [];
+        var $headers = $("th");
+        var $rows = $("tbody tr").each(function(index) {
+        $cells = $(this).find("td");
+        myRows[index] = {};
+        $cells.each(function(cellIndex) {
+            myRows[index][$($headers[cellIndex]).html()] = $(this).html();
+        });    
+        });
+
+        // Let's put this in the object like you want and convert to JSON (Note: jQuery will also do this for you on the Ajax request)
+        var myObj = {};
+        myObj.myrows = myRows;
+        console.log(JSON.stringify(myObj))
+
+        const a = document.createElement("a");
+        const file = new Blob([JSON.stringify(myObj)], { type: "text/plain" });
+        a.href = URL.createObjectURL(file);
+        a.download = "kvizevi.json";
+        a.click();
+		
+
+        // Save the file
+        saveAs(fileToSave, fileName);
+      }
+</script>
+
+<style>
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+</style>
