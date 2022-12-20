@@ -9,6 +9,7 @@
 </head>
 
 <div class="table-data">
+    <h1><b><%= title %></b></h1>
     <select id="parameters" style="font-size: 18px;">
       <option selected="selected" value="-1">All features</option>
       <option value="0">id_kviz</option>
@@ -159,21 +160,19 @@
         for (var i = 0; i < rows.length; i++) {
 
             // Get each column data
-            if(rows[i].style.display != 'none'){
-              var cols = rows[i].querySelectorAll('td,th');
+            var cols = rows[i].querySelectorAll('td,th');
 
-              // Stores each csv row data
-              var csvrow = [];
-              for (var j = 0; j < cols.length; j++) {
+            // Stores each csv row data
+            var csvrow = [];
+            for (var j = 0; j < cols.length; j++) {
 
-                  // Get the text data of each cell
-                  // of a row and push it to csvrow
-                  csvrow.push(cols[j].innerHTML);
-              }
-
-              // Combine each column value with comma
-              csv_data.push(csvrow.join(","));
+                // Get the text data of each cell
+                // of a row and push it to csvrow
+                csvrow.push(cols[j].innerHTML);
             }
+
+            // Combine each column value with comma
+            csv_data.push(csvrow.join(","));
         }
 
         // Combine each row data with new line character
@@ -215,14 +214,12 @@
         // Loop through grabbing everything
         var myRows = [];
         var $headers = $("th");
-        var $rows = $("tbody tr").each(function(index, cell) {
-          if(cell.style.display != 'none'){
-            $cells = $(this).find("td");
-            myRows[index] = {};
-            $cells.each(function(cellIndex){
-                myRows[index][$($headers[cellIndex]).html()] = $(this).html();
-            });    
-          }
+        var $rows = $("tbody tr").each(function(index) {
+        $cells = $(this).find("td");
+        myRows[index] = {};
+        $cells.each(function(cellIndex) {
+            myRows[index][$($headers[cellIndex]).html()] = $(this).html();
+        });    
         });
 
         // Let's put this in the object like you want and convert to JSON (Note: jQuery will also do this for you on the Ajax request)
@@ -235,7 +232,10 @@
         a.href = URL.createObjectURL(file);
         a.download = "kvizevi.json";
         a.click();
-	
+		
+
+        // Save the file
+        saveAs(fileToSave, fileName);
       }
 </script>
 

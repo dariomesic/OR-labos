@@ -9,9 +9,17 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
+
 app.use('/', homeRouter);
 
+// catch 404 and forward to error handler
+app.use((request, response, next) => {
+    // Access response variable and handle it
+    response.status(501).json({status: 'Not Implemented', message: "Method not implemented for requested resource", response: 'null'});
+});
 
 // Server setup
 app.listen(8080 , ()=>{
