@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Authentication with Auth0</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Auth0</a>
+        <form class="form-inline">
+            <a href="/" class="btn btn-outline-danger my-2 my-sm-0">Home</a>
+            <a href="/logout" class="btn btn-outline-danger my-2 my-sm-0">Logout</a>
+        </form>
+    </nav>
+    <div class="row d-flex justify-content-center align-items-center flex-nowrap" style="min-height: 100vh;">
+        <div>
+            <div class="profile-userpic">
+                <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?b=1&s=170667a&w=0&k=20&c=-qQGlKM8OQsSJCEkHnqS9FI94VRTkZ-7tg0K0u02XL0=" class="img-responsive" alt="">
+            </div>
+            <div class="profile-usertitle">
+                <div class="profile-usertitle-name">
+                    Name: <%= user.nickname %>
+                </div>
+                <div class="profile-usertitle-name">
+                  Email: <%= user.name %>
+                </div>
+                <div class="profile-usertitle-name">
+                  Created: <%= user.updated_at %>
+                </div>
+                <div class="profile-usertitle-job">
+                    Role: Developer
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+<style>
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+    
+</style>

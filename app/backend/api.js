@@ -1,13 +1,7 @@
 const express = require('express');
-const { parse } = require('pg-protocol');
 const router = express.Router();
-const db = require('./db/database');
+const db = require('../db/database');
 
-router.get("/", function(req, res, next){
-
-	res.render('home', {title : 'Node JS Ajax CRUD Application'});
-
-});
 
 router.post("/action", function(request, response, next){
 
@@ -16,22 +10,55 @@ router.post("/action", function(request, response, next){
 
 	if(action == 'fetch')
 	{
-        db.connect((err) => {
+      let query =  "select * from kvizevi"
+      db.query(query, (err, result) => {
+          
+          if (err)
+              console.log(err.stack);
+          else {
+              response.json({
+                  data:result
+              });
+          }
+      })
+	}
 
-            if (err) throw err;
-            let query =  "select k.*, string_agg(l.naziv || '-' || l.adresa, ';') as lokacije from kvizevi k,lokacije_kvizeva l where l.id_kviz = k.id_kviz group by k.id_kviz order by k.id_kviz"
-            db.query(query, (err, result) => {
-                
-                if (err)
-                    console.log(err.stack);
-                else {
-                    response.json({
-                        data:result
-                    });
-                }
-                //db.end()
-            })
-        });
+});
+
+router.post("/refresh_json", function(request, response, next){
+
+	var action = request.body.action;
+
+	if(action == 'fetch')
+	{
+      let query =  "COPY ( SELECT row_to_json(kvizevi) kvizovi FROM ( SELECT array_to_json(array_agg(row_to_json(t))) kvizovi FROM ( select k.* from kvizevi k) t) as kvizevi ) TO 'C:/Users/User/Desktop/FER/DIPLOMSKI/3.SEMESTAR/OR/labosi/json_podaci.json'"
+      db.query(query, (err, result) => {
+          
+          if (err)
+              console.log(err.stack);
+          else {
+              console.log("USPJEH_json")
+          }
+      })
+	}
+
+});
+
+router.post("/refresh_csv", function(request, response, next){
+
+	var action = request.body.action;
+
+	if(action == 'fetch')
+	{
+      let query =  "COPY (select k.* from kvizevi k) TO 'C:/Users/User/Desktop/FER/DIPLOMSKI/3.SEMESTAR/OR/labosi/csv_podaci.csv' with DELIMITER ',' CSV HEADER" ;
+      db.query(query, (err, result) => {
+          
+          if (err)
+              console.log(err.stack);
+          else {
+              console.log("USPJEH_csv")
+          }
+      })
 	}
 
 });
@@ -41,7 +68,6 @@ router.get("/quizzes", function(request, response, next){
       if (err)
         throw err
       response.status(200).json({status: 'OK', message: "Fetched quiz object", response: result.rows})
-      //db.end()
     })
   });
 

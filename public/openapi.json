@@ -325,6 +325,12 @@
       "Quiz": {
         "type": "object",
         "properties": {
+          "@context": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LD-object"
+            }
+          },
           "id_kviz": {
             "type": "integer",
             "format": "int64"
@@ -381,6 +387,27 @@
             "items": {
               "$ref": "#/components/schemas/Quiz"
             }
+          }
+        }
+      },
+      "LD-object": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "http://schema.org/name"
+          },
+          "description": {
+            "type": "string",
+            "description": "http://schema.org/description"
+          },
+          "time": {
+            "type": "string",
+            "description": "http://schema.org/Time"
+          },
+          "contact": {
+            "type": "string",
+            "description": "http://schema.org/ContactPage"
           }
         }
       }
